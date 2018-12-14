@@ -4,62 +4,59 @@
    New Perspectives on HTML and CSS, 7th Edition
    Tutorial 6
    Case Problem 3
-
    Calendar Style Sheet
-   Author: 
-   Date:   
-
-   Filename:   lht_tables.css
-
+    Author: Adrian GIlder
+    Date:  12-12-18  
+   Filename:lht _tables.css
 */
-
 /* ===============================
    Mobile Styles: 0px to 640px 
    ===============================
 */
-
 @media only screen and (max-width: 640px) {
 
-   table,
-   tbody,
-   tr,
-   td,
-   th,
-   caption {
-      display: block;
-   }
+    table,
+    tbody,
+    tr,
+    td,
+    th,
+    caption {
+        display: block;
+    }
 
-   thead,
-   h1 {
-      display: none;
-   }
+    thead,
+    h1 {
+        display: none;
+    }
 
-   caption {
-      color: white;
-      background-color: rgb(122, 127, 130);
-      font-size: 1.5em;
-      line-height: 2em;
-   }
+    caption {
+        color: white;
+        background-color: rgb(122, 127, 130);
+        font-size: 1.5em;
+        line-height: 2em;
+    }
 
-   td {
-      border: 1px dotted gray;
-      color: rgb(11, 12, 145);
-      position: relative;
-      padding-left: 40%;
-      min-height: 40px;
-   }
+    td {
+        border: 1px dotted gray;
+        color: rgb(11, 12, 145);
+        position: relative;
+        padding-left: 40%;
+        min-height: 40px;
+    }
 
-   tr:nth-of-type(odd) {
-      background-color: rgb(255, 235, 178);
-      border: 2px solid gray;
-   }
-   td.data-date {
-      position: absolute;
-      top: 0;
-      right: 0;
-      width: 40%;
-      padding: 5px;
-   }
+    tr:nth-of-type(odd) {
+        background-color: rgb(255, 235, 178);
+        border: 2px solid gray;
+    }
+
+    td::before {
+        content: attr(data-date);
+        position: absolute;
+        top: 0px;
+        left: 0px;
+        padding: 5px;
+        width: 40%;
+    }
 }
 
 
@@ -67,3 +64,16 @@
    Tablet and Desktop Styles: greater than 640px
    =============================================
 */
+@media only screen and (min-width: 641px) {
+    table {
+        background-image: url(lht_photo1.png);
+        background-repeat: no-repeat;
+        background-position: bottom right;
+        width: 40%;
+        border: 6px double rgb(154, 64, 3);
+        margin-top: 20px;
+        margin-bottom: 20px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
